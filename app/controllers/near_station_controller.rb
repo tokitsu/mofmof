@@ -1,0 +1,2 @@
+class NearStationController < ApplicationController
+end
