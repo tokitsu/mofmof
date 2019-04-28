@@ -4,7 +4,6 @@ class CreateNearStations < ActiveRecord::Migration[5.0]
       t.string :line
       t.string :station
       t.string :minutes_from_house
-      t.references:house, foreign_key:true
       
       t.timestamps
     end
