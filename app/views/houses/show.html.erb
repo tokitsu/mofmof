@@ -1,9 +1,16 @@
-詳細<br>
+<h2>閲覧</h2><br>
 物件名:<%= @house.name %><br><br>
-賃料:<%= @house.fee %><br><br>
+賃料:<%= @house.fee %>円<br><br>
 住所:<%= @house.adress %><br><br>
-築年数:<%= @house.old %><br><br>
+築年数:<%= @house.old %>年<br><br>
 備考:<%= @house.comment %><br><br>
+<hr>
 
-<%= link_to "編集", edit_house_path %>|
+<% @near_station.each do |near_station| %>
+  <h3>最寄駅</h3>
+  路線名:<%= near_station.line %><br><br>
+  駅名:<%= near_station.station %><br><br>
+  徒歩数分:<%= near_station.minutes_from_house %>分<br><br>
+<% end %>
+<%= link_to "編集", edit_house_path %>
 <%= link_to "戻る", houses_path %>

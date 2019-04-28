@@ -19,7 +19,7 @@
   </div>
   <div>
     <%= f.label :賃料 %><br>
-    <%= f.text_field :fee %><br>
+    <%= f.text_field :fee %>円<br>
   </div>
   <div>
     <%= f.label :住所 %><br>
@@ -27,7 +27,7 @@
   </div>
   <div>
     <%= f.label :築年数 %><br>
-    <%= f.text_field :old %><br>
+    <%= f.text_field :old %>年<br>
   </div>
   <div>
     <%= f.label :備考 %><br>
@@ -35,8 +35,8 @@
   </div>
   <hr>
   
-  <%= f.fields_for :near_station do |ff| %>
-  <h3>最寄り駅１</h3>
+  <%= f.fields_for :near_stations do |ff| %>
+  <h3>最寄り駅</h3>
   <div>
     <%= ff.label :路線名 %><br>
     <%= ff.text_field :line %><br>
@@ -47,7 +47,7 @@
   </div>
   <div>
     <%= ff.label :徒歩数分 %><br>
-    <%= ff.text_field :minutes_from_house %><br>
+    <%= ff.text_field :minutes_from_house %>分<br>
   </div>
   <% end %>
   
