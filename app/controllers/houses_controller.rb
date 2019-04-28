@@ -1,9 +1,7 @@
 class HousesController < ApplicationController
   def new
     @house = House.new
-    @house.near_stations.build
-    
-    #2.times{@house.near_stations.build}
+    2.times{@house.near_stations.build}
     
   end
   
@@ -22,6 +20,7 @@ class HousesController < ApplicationController
   
   def show
     @house = House.find(params[:id])
+    @near_station = @house.near_stations
   end
   
   def edit
